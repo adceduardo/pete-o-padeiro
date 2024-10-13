@@ -6,7 +6,7 @@ Repositório criado para compartilhar minha resolução do teste 'Pete o padeiro
 
 O arquivo 'index.php' contém o código que foi desenvolvido.
 
-##Objetivo do Desafio
+## Objetivo do Desafio
 Pete adora fazer bolos e tem várias receitas disponíveis, mas ele não é muito bom com matemática. A tarefa é ajudá-lo a descobrir quantos bolos inteiros ele pode fazer com os ingredientes que ele tem à disposição.
 
 Regras:
