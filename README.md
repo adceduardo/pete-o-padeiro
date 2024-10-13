@@ -16,7 +16,7 @@ O segundo parâmetro será um array com os ingredientes que Pete tem disponívei
 
 A função deve retornar o número máximo de bolos inteiros que Pete pode fazer usando os ingredientes disponíveis.
 
-### Exemplo 
+### Exemplo: 
 
 ````php
 // Receita para 1 bolo
