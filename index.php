@@ -1,35 +1,35 @@
 <?php
     function cakes($recipe, $ingredients)                         
     {
-        $amount_cakes = null;                                       //Variável que conterá a quantidade de bolos
+        $amount_cakes = null;                                                  //Variável que conterá a quantidade de bolos
                                                       
-        foreach($recipe as $ingredient => $amount_required)         //Laço que irá percorrer sobre cada ingrediente da receita
+        foreach($recipe as $ingredient => $amount_required)                    //Laço que irá percorrer sobre cada ingrediente da receita
         {
-            if(!array_key_exists($ingredient, $ingredients))        //Verifica se o ingrediente (chave) existe no array de $ingredientes
-            {                                                       //Caso não existir retorna 0
+            if(!array_key_exists($ingredient, $ingredients))                   //Verifica se o ingrediente (chave) existe no array de $ingredientes
+            {                                                                  //Caso não existir retorna 0
                 return 0;                                          
             }
 
-            if($ingredients[$ingredient] < $amount_required)       //Verifica se a quantidade de ingredientes disponíveis é menor
-            {                                                      // que o necessário, caso for retorna 0 
+            if($ingredients[$ingredient] < $amount_required)                   //Verifica se a quantidade de ingredientes disponíveis é menor
+            {                                                                  // que o necessário, caso for retorna 0 
                 return 0;
             }
 
-            if($amount_cakes === null)                            //Verifica se a quantidade de bolos é null para incializar a variável 
+            if($amount_cakes === null)                                                 //Verifica se a quantidade de bolos é null para incializar a variável 
             {                                                     
                 $amount_cakes = (int)($ingredients[$ingredient] / $amount_required);
             }
-            else                                                  //Caso a variável amount_cakes já tenha sido inicalizada 
+            else                                                                       //Caso a variável amount_cakes já tenha sido inicalizada 
             {
-                $cake = (int)($ingredients[$ingredient] / $amount_required);//Calcula quantos bolos podem ser feitos com a quantidade atual
-                if($cake < $amount_cakes)                                   //Verifica se o cálculo atual resulta em menos bolos  
+                $cake = (int)($ingredients[$ingredient] / $amount_required);           //Calcula quantos bolos podem ser feitos com a quantidade atual
+                if($cake < $amount_cakes)                                              //Verifica se o cálculo atual resulta em menos bolos  
                 {
-                    $amount_cakes = $cake;                                //Atualiza a variável para manter a menor quantidade             
+                    $amount_cakes = $cake;                                             //Atualiza a variável para manter a menor quantidade             
                 }
             }   
         }
 
-        return $amount_cakes;                                       //Retorna o resultado da função
+        return $amount_cakes;                                                          //Retorna o resultado da função
     }   
 
     // Abaixo estão os casos de uso:
